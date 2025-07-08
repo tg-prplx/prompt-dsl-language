@@ -1,0 +1,21 @@
+    html, body {
+      height: 100%; margin: 0; background: #18191a;
+    }
+    #container {
+      width: 100vw;
+      height: 96vh;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 14px 2px #0004;
+      margin-top: 8px;
+    }
+    #info {
+      margin: 10px 18px 3px 22px;
+      font: bold 14px/1.7 "JetBrains Mono", "Fira Mono", monospace;
+      letter-spacing: 0.1px;
+      color: #f8eecb;
+      background: #232522;
+      border-radius: 8px;
+      padding: 6px 14px 7px 21px;
+      box-shadow: 0 1px 6px #0002;
+    }
