@@ -1,40 +1,39 @@
-Readme:
-
 # Prompt System DSL
 
-Prompt System DSL — это специализированный язык (DSL) для конфигурирования и конструирования промптов для LLM. В проекте есть [редактор][1], поддержка синтаксиса с подсветкой, автодополнение тегов и блоков, конвертация кода DSL в разные форматы промпта (RAW/MID/MINI). Также реализован TUI-интерфейс на Python для офлайн-конвертации.
+Prompt System DSL is a specialized domain-specific language (DSL) for configuring and building prompts for LLMs. The project includes a [visual editor][1], syntax highlighting, tag and block autocompletion, and conversion of DSL code into different prompt formats (RAW/MID/MINI). There is also a TUI interface implemented in Python for offline conversion.
 
-## Установка и запуск
+## Installation and Launch
 
-1. Клонируйте репозиторий.
-2. Установите пакеты:
+1. Clone the repository.
+2. Install the required packages:
 ```bash
 pip install -r requirements.txt
 ```
-3. Для локального запуска веб-редактора:
+3. To run the web editor locally:
    ```
    python run_webui.py
    ```
-   После запуска браузер откроется автоматически.
-4. Для офлайн-TUI:
+   The browser will open automatically after launch.
+4. For the offline TUI:
    ```
    python dsl_tui.py
    ```
 
-## Пример синтаксиса
-
+## Syntax Example
 ```
-tag instruction = <prompt:instruction>
-var name = 'Алиса'
+tag st = <style:compact>
 
-greet {
-    instruction "Привет, ${name}!"
+greeting {
+   <text:greeting>
+   .st
 }
+
+#main-module = greeting
 ```
 
-## Возможности
+## Features
 
-- Быстро описывайте промпты с блоками, тегами, переменными.
-- Три уровня оптимизации генерации текстов: RAW, MID, MINI.
-- Подсветка синтаксиса, проверки, автокомплит.
-- Графический и текстовый интерфейс работы.
+- Quickly describe prompts using blocks, tags, and variables.
+- Three levels of prompt text optimization: RAW, MID, MINI.
+- Syntax highlighting, validation, and autocomplete support.
+- Both graphical and text user interfaces available.
